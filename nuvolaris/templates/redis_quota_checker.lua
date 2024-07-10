@@ -12,7 +12,8 @@
 -- software distributed under the License is distributed on an
 -- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 -- KIND, either express or implied.  See the License for the
--- specific language governing permissions and limitations-- under the License.
+-- specific language governing permissions and limitations
+-- under the License.
 --
 -- Define the key prefix to search for
 local prefix = ARGV[1]
