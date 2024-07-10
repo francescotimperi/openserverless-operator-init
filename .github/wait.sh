@@ -1,3 +1,4 @@
+#!/bin/bash
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -15,42 +16,12 @@
 # specific language governing permissions and limitations
 # under the License.
 #
-.git-hooks/
-__pycache__/
-__pypackages__
-.pdm.toml
-.*-version
-kubeconfig
-openwhisk-deploy-kube/
-kustomization.yaml
-playground
-examples/
-aliases
-deploy/extract/
-deploy/whisk-system/
-deploy/**/*_generated.yaml
-actions/**/*.zip
-node_modules/
-.env
-__*
-clusters/id_rsa*
-clusters/controlplane.yaml
-clusters/talosconfig
-clusters/worker.yaml
-*.kubeconfig
-run.pid
-*.off
-actions/**/nuvolaris/**/*
-!actions/**/__main__.py
-_*.yaml
-apihost.txt
-.git-hooks/
-installer
-whisk.properties
-.task/
-*.log
-.latestcheck
-_failed.txt
-deploy.tar
-actions/github/callback/common
-actions/github/webhook/common
+echo "You have an hour to debug this build"
+echo 'do "touch /tmp/continue" to stop the wait'
+for i in $(seq 1 60) 
+do echo $i
+    sleep 60
+    if test -e /tmp/continue
+    then break
+    fi
+done
